@@ -1,4 +1,5 @@
 GrantBlog::Application.routes.draw do
+  get "admin/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +54,12 @@ GrantBlog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get 'admin' => 'admin#index'
+
+  namespace :admin do
+    resources :blogs
+    resources :blog_templates
+    resources :blog_tabs
+  end
 end
