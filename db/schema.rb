@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20131202142838) do
 
   create_table "blog_tabs", force: true do |t|
     t.string   "title"
+    t.string   "type"
     t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"

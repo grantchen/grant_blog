@@ -1,2 +1,2 @@
-class Admin::BlogTemplatesController < InheritedResources::Base
+class Admin::BlogTemplatesController < Admin::BaseController
 end

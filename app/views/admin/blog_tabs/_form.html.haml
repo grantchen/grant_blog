@@ -1,0 +1,23 @@
+= form_for [:admin, @blog_tab] do |f|
+  %div.row
+    %div.large-6
+      %div.row
+        %div.columns.large-2
+          = f.label :title, "名字", class: "right inline required"
+        %div.columns.large-10
+          = f.text_field :title
+    %div.large-6
+      %div.row
+        %div.columns.large-2
+          = f.label :type, "类型", class: "right inline"
+        %div.columns.large-10
+          = f.text_field :type
+    %div.large-6
+      %div.row
+        %div.columns.large-2
+          = f.label :sort, "排序", class: "right inline"
+        %div.columns.large-2.left
+          = f.text_field :sort
+  %div.row
+    .div.large-6
+      = f.submit '保存导航链接', class: "button small radius"

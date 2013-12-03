@@ -1,3 +1,19 @@
-= render 'admin/shared/nav'
+%div.row
+  =link_to "新建导航链接", new_admin_blog_tab_path, class: "button small radius"
 
 %div.row
+  %table
+    %thead
+      %tr
+        %th 名字
+        %th 类型
+        %th 排序
+    %tbody
+      - @blog_tabs.each do |blog_tab|
+        %tr
+          %td = blog_tab.name
+        %tr
+          %td = blog_tab.type
+        %tr
+          %td = blog_tab.sort
+

@@ -1,9 +1,13 @@
-%section.top-bar-section
-  %nav.top-bar
-    %ul.left
-      %li
-        = link_to "博客管理", "#"
-      %li
-        = link_to "模板管理", "#"
-      %li
-        = link_to "Tabs管理", "#"
+%div.row
+  %h1 博客后台管理
+%div.row
+  %section.top-bar-section
+    %nav.top-bar
+      %ul.left
+        %li
+          = link_to "博客管理", admin_blogs_path
+        %li
+          = link_to "模板管理", admin_blog_templates_path
+        %li
+          = link_to "导航链接管理", admin_blog_tabs_path
+  %hr

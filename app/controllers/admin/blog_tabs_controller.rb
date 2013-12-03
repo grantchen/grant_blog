@@ -1,3 +1,3 @@
-class Admin::BlogTabsController < InheritedResources::Base
+class Admin::BlogTabsController < Admin::BaseController
 
 end
