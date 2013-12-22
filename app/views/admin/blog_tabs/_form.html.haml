@@ -9,9 +9,9 @@
     %div.large-6
       %div.row
         %div.columns.large-2
-          = f.label :type, "类型", class: "right inline"
-        %div.columns.large-10
-          = f.text_field :type
+          = f.label :tab_type, "类型", class: "right inline"
+        %div.columns.large-4.left
+          = f.select :tab_type, [['文章列表', "list"], ['单篇文章', "single"]]
     %div.large-6
       %div.row
         %div.columns.large-2

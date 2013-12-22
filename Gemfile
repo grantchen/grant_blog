@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'bcrypt-ruby'
-gem 'inherited_resources'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'foundation-rails'
 gem 'haml'
 
