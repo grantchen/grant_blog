@@ -1,0 +1,24 @@
+= form_for [:admin, @blog_template] do |f|
+  %div.row
+    %div.large-12
+      %div.row
+        %div.columns.large-1
+          = f.label :title, "名字", class: "right inline required"
+        %div.columns.large-8.left
+          = f.text_field :title
+    %div.large-12.content_div
+      %div.row
+        %div.columns.large-1
+          = f.label :content, "模板内容", class: "right inline"
+        %div.columns.large-10.left.template_content
+          %dl.sub-nav.editor_nav
+            %dd.active
+              = link_to "编辑", "javascript:void(0)", id: "blog_template_edit"
+            %dd
+              = link_to "预览", "javascript:void(0)", id: "blog_template_preview"
+          = f.text_area :content
+        %div.columns.large-10.left.template_preview.hide
+
+  %div.row
+    .div.large-6
+      = f.submit '保存博客模板', class: "button small radius"

@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require markdown_highlight_styles/monokai_sublime
  *= require_tree .
  */
 @import "admin/all";

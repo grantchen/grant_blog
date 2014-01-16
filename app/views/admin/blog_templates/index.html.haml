@@ -1,0 +1,14 @@
+%div.row
+  =link_to "新建模板", new_admin_blog_template_path, class: "button small radius"
+
+%div.row
+  %table
+    %thead
+      %tr
+        %th 名字
+        %th 动作
+    %tbody
+      - @blog_templates.each do |blog_template|
+        %tr
+          %td{width: "200"}
+            = blog_template.title
