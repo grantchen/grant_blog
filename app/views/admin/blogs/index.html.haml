@@ -1,0 +1,24 @@
+%div.row
+  =link_to "新建文章", new_admin_blog_path, class: "button small radius"
+
+%div.row
+  %table
+    %thead
+      %tr
+        %th 标题
+        %th 内容
+        %th 动作
+    %tbody
+      - @blogs.each do |blog|
+        %tr
+          %td{width: "300"}
+            = truncate(blog.title, length: 30)
+          %td{width: "500"}
+            = truncate(blog.content, length: 50)
+          %td{width: "200"}
+            =link_to "编辑", edit_admin_blog_path(blog), class: "margin_right_10"
+            = "|"
+            =link_to "删除", admin_blog_path(blog), method: "delete", confirm: "你确认删除吗？", class: "margin_left_10"
+
+%div.row
+  = will_paginate @blogs

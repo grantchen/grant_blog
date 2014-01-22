@@ -1,0 +1,20 @@
+.blog_content {
+  textarea{
+    height: 300px;
+  }
+}
+.new_blog, .edit_blog{
+  .editor_nav{
+    margin-bottom: 0px;
+  }
+  .content_div{
+    height: 350px;
+    .blog_preview{
+      border: 1px solid #CCCCCC;
+      min-height: 300px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      padding: 10px;
+    }
+  }
+}

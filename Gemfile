@@ -31,6 +31,7 @@ gem 'bcrypt-ruby'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'foundation-rails'
 gem 'haml'
+gem 'will_paginate', '~> 3.0.5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
