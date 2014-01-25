@@ -6,12 +6,13 @@
           = f.label :title, "标题", class: "right inline required"
         %div.columns.large-8.left
           = f.text_field :title
-    %div.large-12
-      %div.row
-        %div.columns.large-1
-          = f.label :title, "文章模板", class: "right inline required"
-        %div.columns.large-2.left
-          = f.select :blog_template_id, @blog_templates.map{|x|[x.title, x.id]}
+    - if @blog.id.nil?
+      %div.large-12
+        %div.row
+          %div.columns.large-1
+            = f.label :title, "文章模板", class: "right inline required"
+          %div.columns.large-2.left
+            = f.select :blog_template_id, @blog_templates.map{|x|[x.title, x.id]}
     %div.large-12.content_div
       %div.row
         %div.columns.large-1

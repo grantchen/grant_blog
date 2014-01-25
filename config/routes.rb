@@ -59,7 +59,9 @@ GrantBlog::Application.routes.draw do
 
   namespace :admin do
     resources :blogs
-    resources :blog_templates
+    resources :blog_templates do
+      get 'get_content', on: :collection
+    end
     resources :blog_tabs
   end
 end
