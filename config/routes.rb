@@ -55,9 +55,10 @@ GrantBlog::Application.routes.draw do
   #     resources :products
   #   end
 
-  get 'admin' => 'admin#index'
-
   namespace :admin do
+    get '/' => 'admin#index'
+    post '/login' => 'admin#login'
+    get '/logout' => 'admin#logout'
     resources :blogs
     resources :blog_templates do
       get 'get_content', on: :collection

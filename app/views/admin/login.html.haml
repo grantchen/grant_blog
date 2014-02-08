@@ -1,0 +1,21 @@
+- provide(:title, '博客后台登录')
+%div.row
+  %h1.center 博客后台登录
+
+%form.login-in{action: "/admin/login", method: "post"}
+  %div.row
+    %div.small-5.center
+      %div.row
+        %div.small-3.columns
+          %label.right.inline 用户名
+        %div.small-9.columns
+          %input{type: "text", name: "user_name", value: "#{@user_name}"}
+      %div.row
+        %div.small-3.columns
+          %label.right.inline 密码
+        %div.small-9.columns
+          %input{type: "password", name: "user_password"}
+      %div.row
+        %div.small-12.columns
+          %input{type: "hidden", name: "authenticity_token", value: "#{form_authenticity_token}"}
+          %input.button.small.right{type: "submit", value: "登录"}

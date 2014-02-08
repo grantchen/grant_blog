@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GrantBlog::Application.config.secret_key_base = 'e53ce5dc1f2838e044c0065625a5fa1e2072a3c043a171f71b5234099b3c356b420ec04957460c0d0f4ea253b7dbee264faf04bef33c43923bc2cc553acf7a2d'
+GrantBlog::Application.config.secret_key_base = '1ec339b52bc13375f1aa6fa7a69314c3ee1ae2277db0191b8881598ae68465826bb869adb8bb47261a3eda2fc27b236efb81093eab2ffa52c7db62fe51b29f39'
