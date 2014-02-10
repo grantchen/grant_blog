@@ -7,14 +7,20 @@
       %tr
         %th 标题
         %th 内容
+        %th 创建时间
+        %th 更新时间
         %th 动作
     %tbody
       - @blogs.each do |blog|
         %tr
-          %td{width: "300"}
+          %td{width: "200"}
             = truncate(blog.title, length: 30)
-          %td{width: "500"}
+          %td{width: "400"}
             = truncate(blog.content, length: 50)
+          %td{width: "220"}
+            = format_date_time blog.created_at
+          %td{width: "220"}
+            = format_date_time blog.updated_at
           %td{width: "200"}
             =link_to "编辑", edit_admin_blog_path(blog), class: "margin_right_10"
             = "|"

@@ -65,4 +65,8 @@ GrantBlog::Application.routes.draw do
     end
     resources :blog_tabs
   end
+
+  root 'home#index'
+
+  resources :blogs
 end

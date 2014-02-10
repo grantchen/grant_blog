@@ -24,5 +24,7 @@ module GrantBlog
       g.assets false
       g.template_engine :haml
     end
+
+    config.time_zone = 'Beijing'
   end
 end
