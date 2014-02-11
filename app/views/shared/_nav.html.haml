@@ -4,5 +4,8 @@
   %section.top-bar-section
     %nav.top-bar
       %ul.left
-        %li{:class => tabs_class("home")}
+        %li{:class => tabs_class("blogs")}
           = link_to "主页", root_path
+        - @blog_tabs.each do |blog_tab|
+          %li{:class => tabs_class(blog_tab.title)}
+            = link_to blog_tab.title, "#{blogs_path}?tab_id=#{blog_tab.id}"

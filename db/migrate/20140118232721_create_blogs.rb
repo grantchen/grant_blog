@@ -4,6 +4,7 @@ class CreateBlogs < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.references :blog_template, index: true
+      t.references :blog_tab, index:true
 
       t.timestamps
     end

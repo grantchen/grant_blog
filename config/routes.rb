@@ -66,7 +66,7 @@ GrantBlog::Application.routes.draw do
     resources :blog_tabs
   end
 
-  root 'home#index'
+  root 'blogs#index'
 
   resources :blogs
 end

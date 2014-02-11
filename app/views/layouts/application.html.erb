@@ -13,7 +13,9 @@
 
   <body>
     <%= render 'shared/nav' %>
-    <%= yield %>
+    <div class="body_main">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

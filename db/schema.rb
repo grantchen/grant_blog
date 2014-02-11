@@ -32,16 +32,18 @@ ActiveRecord::Schema.define(version: 20140118232721) do
     t.string   "title"
     t.text     "content"
     t.integer  "blog_template_id"
+    t.integer  "blog_tab_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "blogs", ["blog_tab_id"], name: "index_blogs_on_blog_tab_id", using: :btree
   add_index "blogs", ["blog_template_id"], name: "index_blogs_on_blog_template_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "name"
-    t.string   "encrypted_password"
+    t.string   "password_digest"
     t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"

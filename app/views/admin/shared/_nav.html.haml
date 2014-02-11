@@ -6,9 +6,8 @@
     %nav.top-bar
       %ul.left
         %li{:class => admin_tabs_class("admin/blogs")}
-          = link_to "博客管理", admin_blogs_path
+          = link_to "文章管理", admin_blogs_path
         %li{:class => admin_tabs_class("admin/blog_templates")}
-          = link_to "模板管理", admin_blog_templates_path
+          = link_to "文章模板管理", admin_blog_templates_path
         %li{:class => admin_tabs_class("admin/blog_tabs")}
-          = link_to "导航链接管理", admin_blog_tabs_path
-  %hr
+          = link_to "文章板块管理", admin_blog_tabs_path
