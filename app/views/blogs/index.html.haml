@@ -2,3 +2,6 @@
   %table.blog_list
     - @blogs.each do |blog|
       = render 'shared/blog_preview', blog: blog
+
+%div.row
+  = will_paginate @blogs

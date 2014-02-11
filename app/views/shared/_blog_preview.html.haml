@@ -2,8 +2,8 @@
   %td
     = link_to blog.title, blog_path(blog)
     %span.right
-      = "浏览数: 0"
-      = "评论数: 0"
+      = "浏览数: #{blog.view_count}"
+      = "评论数: #{blog.comment_count}"
     %div.created_at
       = "创建于:"
       = format_date_time blog.created_at

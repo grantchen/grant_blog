@@ -1,6 +1,6 @@
 class BaseController < ApplicationController
   before_filter :load_blog_cats
-
+  layout "blogs"
 
   private
 
