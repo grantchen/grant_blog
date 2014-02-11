@@ -13,9 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140118232721) do
 
-  create_table "blog_tabs", force: true do |t|
+  create_table "blog_cats", force: true do |t|
     t.string   "title"
-    t.string   "tab_type"
+    t.string   "cat_type"
     t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 20140118232721) do
     t.string   "title"
     t.text     "content"
     t.integer  "blog_template_id"
-    t.integer  "blog_tab_id"
+    t.integer  "blog_cat_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "blogs", ["blog_tab_id"], name: "index_blogs_on_blog_tab_id", using: :btree
+  add_index "blogs", ["blog_cat_id"], name: "index_blogs_on_blog_cat_id", using: :btree
   add_index "blogs", ["blog_template_id"], name: "index_blogs_on_blog_template_id", using: :btree
 
   create_table "users", force: true do |t|

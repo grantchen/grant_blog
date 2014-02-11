@@ -63,7 +63,7 @@ GrantBlog::Application.routes.draw do
     resources :blog_templates do
       get 'get_content', on: :collection
     end
-    resources :blog_tabs
+    resources :blog_cats
   end
 
   root 'blogs#index'

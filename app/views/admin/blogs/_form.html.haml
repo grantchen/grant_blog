@@ -18,7 +18,7 @@
         %div.columns.large-1
           = f.label :title, "文章板块", class: "right inline required"
         %div.columns.large-2.left
-          = f.select :blog_tab_id, @blog_tabs.map{|x|[x.title, x.id]}
+          = f.select :blog_cat_id, @blog_cats.map{|x|[x.title, x.id]}
     %div.large-12.content_div
       %div.row
         %div.columns.large-1

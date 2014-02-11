@@ -1,16 +1,16 @@
 class Admin::BlogsController < Admin::BaseController
 
   before_filter :load_blog_templates, only: [:new, :edit]
-  before_filter :load_blog_tabs, only: [:new, :edit]
+  before_filter :load_blog_cats, only: [:new, :edit]
 
   def permitted_params
-    params.permit(:blog => [:title, :blog_template_id, :blog_tab_id, :content])
+    params.permit(:blog => [:title, :blog_template_id, :blog_cat_id, :content])
   end
 
   def new
     @blog = Blog.new
     @blog.build_blog_template
-    @blog.build_blog_tab
+    @blog.build_blog_cat
   end
 
   def index
@@ -27,8 +27,8 @@ class Admin::BlogsController < Admin::BaseController
     @blog_templates = BlogTemplate.all
   end
 
-  def load_blog_tabs
-    @blog_tabs = BlogTab.all
+  def load_blog_cats
+    @blog_cats = BlogCat.all
   end
 
 end

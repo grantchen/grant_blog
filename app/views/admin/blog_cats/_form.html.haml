@@ -1,4 +1,4 @@
-= form_for [:admin, @blog_tab] do |f|
+= form_for [:admin, @blog_cat] do |f|
   %div.row
     %div.large-6
       %div.row
@@ -9,9 +9,9 @@
     %div.large-6
       %div.row
         %div.columns.large-2
-          = f.label :tab_type, "类型", class: "right inline"
+          = f.label :cat_type, "类型", class: "right inline"
         %div.columns.large-4.left
-          = f.select :tab_type, [['文章列表', "list"], ['单篇文章', "single"]]
+          = f.select :cat_type, [['文章列表', "list"], ['单篇文章', "single"]]
     %div.large-6
       %div.row
         %div.columns.large-2
