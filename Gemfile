@@ -52,4 +52,5 @@ end
 group :development do
   gem 'thin'
   gem 'quiet_assets'
+  gem 'capistrano', '~> 3.1.0'
 end
