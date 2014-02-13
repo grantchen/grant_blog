@@ -54,3 +54,7 @@ group :development do
   gem 'quiet_assets'
   gem 'capistrano', '~> 3.1.0'
 end
+
+group :production do
+  gem 'puma'
+end
