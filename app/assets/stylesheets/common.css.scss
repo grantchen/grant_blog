@@ -1,5 +1,5 @@
 html{
-  background: #eee url(background.png) bottom left repeat
+  background: #eee image-url('background.png') 0 0 repeat;
 }
 body {
   background: none !important;
