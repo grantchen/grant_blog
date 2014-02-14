@@ -1,7 +1,7 @@
 class Admin::BlogCatsController < Admin::BaseController
 
   def permitted_params
-    params.permit(:blog_cat => [:title, :tab_type, :sort])
+    params.permit(:blog_cat => [:title, :cat_type, :sort])
   end
 
   def show
