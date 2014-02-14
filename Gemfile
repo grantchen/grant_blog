@@ -53,6 +53,10 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano3-puma'
+  gem 'capistrano_colors', require: false
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 
 group :production do

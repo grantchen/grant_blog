@@ -41,6 +41,15 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capistrano-bundler (1.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano3-puma (0.2.2)
+      capistrano (~> 3.0)
+    capistrano_colors (0.5.5)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -154,6 +163,10 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   capistrano (~> 3.1.0)
+  capistrano-bundler
+  capistrano-rails
+  capistrano3-puma
+  capistrano_colors
   coffee-rails (~> 4.0.0)
   foundation-rails
   haml

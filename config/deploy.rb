@@ -1,5 +1,3 @@
-require 'puma/capistrano'
-
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
@@ -58,3 +56,5 @@ namespace :deploy do
   end
 
 end
+
+after "deploy", "deploy:migrate"
