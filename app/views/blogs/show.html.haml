@@ -1,5 +1,5 @@
 %div.row
   %h4.blog_title
     = @blog.title
+= text_area_tag "blog_content", sanitize(@blog.content), class: "hide"
 %div.row.blog_content_preview
-  = @blog.content
