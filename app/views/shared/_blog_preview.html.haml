@@ -1,9 +1,14 @@
 %tr
   %td
     = link_to blog.title, blog_path(blog)
-    %span.right
-      = "浏览数: #{blog.view_count}"
-      = "评论数: #{blog.comment_count}"
-    %div.created_at
+    %div.blog_bottom
+      %i.fi-plus
       = "创建于:"
       = format_date_time blog.created_at
+      %span.right
+        %span.view_count
+          %i.fi-eye
+          = "浏览数: #{blog.view_count}"
+        %span.comment_count
+          %i.fi-comment
+          = "评论数: #{blog.comment_count}"
