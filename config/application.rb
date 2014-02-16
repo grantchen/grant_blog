@@ -26,5 +26,6 @@ module GrantBlog
     end
 
     config.time_zone = 'Beijing'
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
