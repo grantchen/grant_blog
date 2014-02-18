@@ -1,5 +1,8 @@
-%div.row
-  %h4.blog_title
-    = @blog.title
-= text_area_tag "blog_content", @blog.content, class: "hide"
-%div.row.blog_content_preview
+%div.blog_main
+  %div.row
+    %h4.blog_title
+      = @blog.title
+  = text_area_tag "blog_content", @blog.content, class: "hide"
+  %div.row.blog_content_preview
+%div.blog_comment_form
+  = render "comments/form"

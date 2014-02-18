@@ -1,0 +1,18 @@
+= form_for :comments do |f|
+  %div.large-11
+    %div.row
+      %div.large-1.columns
+        = f.label :username, "用户名", class: "inline left"
+      %div.large-5.columns
+        = f.text_field :username, class: "required left"
+      %div.large-1.columns
+        = f.label :email, "Email", class: "inline left"
+      %div.large-5.columns
+        = f.text_field :email, class: "required"
+  %div.large-11
+    %div.row
+      %div.large-1.columns
+        = f.label :comment, "评论", class: "inline left"
+      %div.large-11.columns
+        = f.text_area :comment, class: "left required"
+  = f.submit "评论", class: "button small right comment_submit"

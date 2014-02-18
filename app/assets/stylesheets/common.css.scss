@@ -5,10 +5,8 @@ body {
   background: none !important;
 }
 .body_main{
-  background: white;
   margin: 0 auto;
   width: 1000px;
-  padding: 20px;
   margin-top: 20px;
   margin-bottom: 50px;
 }
@@ -35,9 +33,6 @@ body {
   position: absolute !important;
   left: 1100px;
   top: 15px;
-}
-.blog_list {
-  width: 100%;
 }
 .blog_bottom {
   font-size: 12px;
@@ -73,3 +68,11 @@ span.normal{
 .size-60 { font-size: 60px; }
 
 .size-72 { font-size: 72px; }
+
+.body_admin_main {
+  background: white;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}

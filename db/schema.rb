@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140118232721) do
+ActiveRecord::Schema.define(version: 20140217222121) do
 
   create_table "blog_cats", force: true do |t|
     t.string   "title"
@@ -42,17 +42,16 @@ ActiveRecord::Schema.define(version: 20140118232721) do
   add_index "blogs", ["blog_cat_id"], name: "index_blogs_on_blog_cat_id", using: :btree
   add_index "blogs", ["blog_template_id"], name: "index_blogs_on_blog_template_id", using: :btree
 
-  create_table "blogs_bk", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "blog_template_id"
-    t.integer  "blog_cat_id"
+  create_table "comments", force: true do |t|
+    t.string   "user_name"
+    t.string   "email"
+    t.text     "comment"
+    t.integer  "blog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "blogs_bk", ["blog_cat_id"], name: "index_blogs_on_blog_tab_id", using: :btree
-  add_index "blogs_bk", ["blog_template_id"], name: "index_blogs_on_blog_template_id", using: :btree
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
