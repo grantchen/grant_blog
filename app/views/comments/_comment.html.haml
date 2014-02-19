@@ -1,0 +1,11 @@
+%div.comment
+  %div.user
+    = image_tag Gravatar.new(comment.email).image_url, class: "comment_avatar"
+    %div.user_name
+      = comment.user_name
+  %div.left
+    %div.comment_at
+      %i.fi-clock
+      = format_date_time comment.created_at
+    %div.content
+      = comment.comment

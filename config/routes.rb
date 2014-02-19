@@ -69,4 +69,5 @@ GrantBlog::Application.routes.draw do
   root 'blogs#index'
 
   resources :blogs
+  resources :comments
 end

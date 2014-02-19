@@ -64,6 +64,9 @@ GEM
     foundation-rails (5.0.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    gravatar-ultimate (2.0.0)
+      activesupport (>= 2.3.14)
+      rack
     haml (4.0.4)
       tilt
     has_scope (0.6.0.rc)
@@ -169,6 +172,7 @@ DEPENDENCIES
   capistrano_colors
   coffee-rails (~> 4.0.0)
   foundation-rails
+  gravatar-ultimate
   haml
   inherited_resources!
   jbuilder (~> 1.2)

@@ -33,3 +33,49 @@ span.view_count, span.comment_count{
     top: -60px;
   }
 }
+
+.blog_comments{
+  margin-top:20px;
+  background: white;
+  width: 1000px;
+  padding: 20px 20px 5px 20px;
+  h5 {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+  }
+  .comment{
+    font-size: 12px;
+    min-height: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    .user{
+      width: 50px;
+      float: left;
+      text-align: center;
+    }
+    .user_name{
+      width: 50px;
+      color: #999;
+      word-break: break-all;
+    }
+    .comment_avatar{
+      width: 30px;
+      margin-bottom: 5px;
+    }
+    .comment_at{
+      margin-top: -52px;
+      margin-left: 65px;
+      margin-bottom: 5px;
+      color: #999;
+      font-size: 12px;
+    }
+    .content{
+      margin-left: 65px;
+      width: 900px;
+      min-height: 55px;
+      padding: 0px 10px 10px 0px;
+      line-height: 22px;
+    }
+  }
+}

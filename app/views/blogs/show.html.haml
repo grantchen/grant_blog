@@ -4,5 +4,9 @@
       = @blog.title
   = text_area_tag "blog_content", @blog.content, class: "hide"
   %div.row.blog_content_preview
+%div.blog_comments
+  %h5
+    = "评论 (#{@blog.comment_count})"
+  = render partial: "comments/comment", collection: @blog.comments
 %div.blog_comment_form
   = render "comments/form"

@@ -1,14 +1,16 @@
-= form_for :comments do |f|
+- comment = @blog.comments.build
+= form_for comment do |f|
   %div.large-11
     %div.row
       %div.large-1.columns
-        = f.label :username, "用户名", class: "inline left"
+        = f.label :use_rname, "用户名", class: "inline left"
       %div.large-5.columns
-        = f.text_field :username, class: "required left"
+        = f.text_field :user_name, class: "required left"
       %div.large-1.columns
         = f.label :email, "Email", class: "inline left"
       %div.large-5.columns
         = f.text_field :email, class: "required"
+        = f.hidden_field :blog_id, value: @blog.id
   %div.large-11
     %div.row
       %div.large-1.columns
