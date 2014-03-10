@@ -88,7 +88,7 @@ stdout_redirect "#{application_path}/log/puma_access.log", "#{application_path}/
 # bind 'unix:///var/run/puma.sock?umask=0777'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
 
-bind "unix://#{application_path}/tmp/sockets/puma.socket"
+bind "unix://#{application_path}/tmp/sockets/puma.sock"
 
 # Instead of “bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'” you
 # can also use the “ssl_bind” option.
